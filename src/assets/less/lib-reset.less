@@ -1,0 +1,88 @@
+// 使用哪种rest方案待定
+@import "./lib-base.less";
+
+* {
+  box-sizing: border-box;
+}
+
+#app,
+body,
+html {
+  position: relative;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  // width: 0px;
+  display: none;
+}
+
+html {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  height: 100%;
+}
+
+body {
+  -webkit-touch-callout: none;
+  -webkit-overflow-scrolling: touch;
+  font: 14px *2 "PingFang SC",miui,system-ui,-apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,sans-serif;
+  color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex: 1 0 auto;
+}
+
+a,
+button,
+input,
+label,
+select,
+textarea {
+  font-family: "PingFang SC",miui,system-ui,-apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,sans-serif;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  border: none;
+  -webkit-appearance: none;
+  font-size: 14px *2;
+  // -webkit-user-select: none;
+  // -moz-user-focus: none;
+  // -moz-user-select: none;
+  // -webkit-appearance: none;
+  // outline: none;
+}
+
+a,
+button {
+  &:active {
+    filter: brightness(0.9);
+  }
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex: 1 0 auto;
+  position: relative;
+  // max-width: 375px *2;
+  width: 100%;
+  min-height: 352px *2;
+  font-size: 14px *2;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .2s ease;
+}
+/* .fade-leave-active in <2.1.8 */
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
